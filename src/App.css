@@ -1,0 +1,167 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.APP {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.todo-wrapper {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-input-item {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+.primarybtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.primarybtn:hover {
+  background-color: #0056b3;
+}
+
+.btn-area {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn-area button {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-area button:first-child {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.btn-area button:last-child {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-area button:first-child:hover {
+  background-color: #e0a800;
+}
+
+.btn-area button:last-child:hover {
+  background-color: #218838;
+}
+
+.todo-list {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.todo-list h3 {
+  margin-bottom: 5px;
+}
+
+.todo-list p {
+  font-size: 14px;
+  color: #555;
+}
+
+.todo-item button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.todo-item button:hover {
+  opacity: 0.9;
+}
+
+
+.todo-item button:nth-child(3) {
+  background-color: #17a2b8; 
+  color: white;
+}
+
+.todo-item button:nth-child(3):hover {
+  background-color: #138496;
+}
+
+.todo-item button:nth-child(2) {
+  background-color: #28a745; 
+  color: rgb(255, 255, 255);
+}
+.todo-item button:nth-child(2):hover {
+  background-color: #218838;
+}
+.completed {
+  text-decoration: line-through;
+  background-color: #cbb3ff;
+}
