@@ -2,43 +2,43 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
+  const [tit, setTit] = useState('');
+  const [info, setInfo] = useState('');
   const [tasks, setTasks] = useState([]);
   const [filter, setFilter] = useState('Todo'); 
   const [isEditing, setIsEditing] = useState(null); 
-  const [editTitle, setEditTitle] = useState(''); 
-  const [editDescription, setEditDescription] = useState(''); 
+  const [editTit, setEditTit] = useState(''); 
+  const [editinfo, setEditInfo] = useState(''); 
 
   const addTask = () => {
-    if (title.trim() && description.trim()) {
+    if (tit.trim() && info.trim()) {
       const newTask = {
-        title,
-        description,
+        tit,
+        info,
         completed: false,
       };
       setTasks([...tasks, newTask]); 
-      setTitle(''); 
-      setDescription(''); 
+      setTit(''); 
+      setInfo(''); 
     }
   };
 
-  const toggleCompletion = (i) => {
+  const Completion = (i) => {
     const updatedTasks = tasks.map((task, k) =>
       k === i ? { ...task, completed: !task.completed } : task
     );
     setTasks(updatedTasks);
   };
 
-  const startEditing = (i) => {
+  const startEdit = (i) => {
     setIsEditing(i);
-    setEditTitle(tasks[i].title);
-    setEditDescription(tasks[i].description);
+    setEditTit(tasks[i].tit);
+    setEditInfo(tasks[i].info);
   };
 
   const updateTask = (i) => {
     const updatedTasks = tasks.map((task, k) =>
-      k === i? { ...task, title: editTitle, description: editDescription } : task
+      k === i? { ...task, tit: editTit, info: editinfo} : task
     );
     setTasks(updatedTasks);
     setIsEditing(null); 
@@ -58,8 +58,8 @@ function App() {
             <input
               type='text'
               placeholder='Task title'
-              value={title}
-              onChange={(input) => setTitle(input.target.value)}
+              value={tit}
+              onChange={(input) => setTit(input.target.value)}
             />
           </div>
           <div className='todo-i-i'>
@@ -67,8 +67,8 @@ function App() {
             <input
               type='text'
               placeholder='Description'
-              value={description}
-              onChange={(input) => setDescription(input.target.value)}
+              value={info}
+              onChange={(input) => setInfo(input.target.value)}
             />
           </div>
           <div className='todo-i-i'>
@@ -88,13 +88,13 @@ function App() {
                     <div>
                       <input
                         type='text'
-                        value={editTitle}
-                        onChange={(input) => setEditTitle(input.target.value)}
+                        value={editTit}
+                        onChange={(input) => setEditTit(input.target.value)}
                       />
                       <input
                         type='text'
-                        value={editDescription}
-                        onChange={(input) => setEditDescription(input.target.value)}
+                        value={editinfo}
+                        onChange={(input) => setEditInfo(input.target.value)}
                       />
                       <button onClick={() => updateTask(index)}>
                         Update
@@ -102,15 +102,15 @@ function App() {
                     </div>
                   ) : (
                     <div>
-                      <h3>{task.title}</h3>
-                      <p>{task.description}</p>
+                      <h3>{task.tit}</h3>
+                      <p>{task.info}</p>
                       <button
-                        onClick={() => toggleCompletion(index)}
+                        onClick={() => Completion(index)}
                         className={task.completed ? 'completed' : ''}
                       >
-                        {task.completed ? 'Mark as Todo' : 'Mark as Completed'}
+                        {task.completed ? 'Todo' : 'Completed'}
                       </button>
-                      <button onClick={() => startEditing(index)}>
+                      <button onClick={() => startEdit(index)}>
                         Update
                       </button>
                     </div>
@@ -118,7 +118,7 @@ function App() {
                 </div>
               ))
             ) : (
-              <p>No tasks found</p>
+              <p>No tasks</p>
             )}
           </div>
         </div>
