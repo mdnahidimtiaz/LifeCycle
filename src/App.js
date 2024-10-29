@@ -49,20 +49,20 @@ function App() {
   );
 
   return (
-    <div className='APP'>
+    <div className='App'>
       <h1>Daily Routine</h1>
-      <div className='todo-w'>
-        <div className='todo-i'>
-          <div className='todo-i-i'>
+      <div className='T1'>
+        <div className='T2'>
+          <div className='T3'>
             <label>Title</label>
             <input
               type='text'
-              placeholder='Task title'
+              placeholder='title'
               value={tit}
               onChange={(input) => setTit(input.target.value)}
             />
           </div>
-          <div className='todo-i-i'>
+          <div className='T3'>
             <label>Description</label>
             <input
               type='text'
@@ -71,16 +71,16 @@ function App() {
               onChange={(input) => setInfo(input.target.value)}
             />
           </div>
-          <div className='todo-i-i'>
-            <button type='button' className='primarybtn' onClick={addTask}>
-              Add
+          <div className='T3'>
+            <button type='button' className='B2' onClick={addTask}>
+            Append
             </button>
           </div>
-          <div className='btn-area'>
+          <div className='B1'>
             <button onClick={() => setFilter('Todo')}>Todo</button>
             <button onClick={() => setFilter('Completed')}>Completed</button>
           </div>
-          <div className='todo-l'>
+          <div className='T4'>
             {filteredTasks.length > 0 ? (
               filteredTasks.map((task, index) => (
                 <div key={index} className='todo-i'>
@@ -102,8 +102,8 @@ function App() {
                     </div>
                   ) : (
                     <div>
-                      <h3>{task.tit}</h3>
-                      <p>{task.info}</p>
+                      <h2>{task.tit}</h2>
+                      <h6>{task.info}</h6>
                       <button
                         onClick={() => Completion(index)}
                         className={task.completed ? 'completed' : ''}
@@ -118,7 +118,7 @@ function App() {
                 </div>
               ))
             ) : (
-              <p>No tasks</p>
+              <p>No task</p>
             )}
           </div>
         </div>
