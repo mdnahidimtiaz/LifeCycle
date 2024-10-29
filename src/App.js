@@ -83,7 +83,7 @@ function App() {
           <div className='T4'>
             {filteredTasks.length > 0 ? (
               filteredTasks.map((task, index) => (
-                <div key={index} className='todo-i'>
+                <div key={index} className='T2'>
                   {isEditing === index ? (
                     <div>
                       <input
