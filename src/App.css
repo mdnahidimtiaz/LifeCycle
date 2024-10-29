@@ -8,11 +8,11 @@
 
 body {
   font-family: 'Times New Roman', Times;
-  background-color: white;
+  background-color: #f4f4f4;
   color: black;
 }
 
-.APP {
+.App {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +27,7 @@ h1 {
   font-weight: bold;
 }
 
-.todo-w {
+.T1 {
   background-color: white;
   border-radius: 10px;
   padding: 20px;
@@ -35,12 +35,12 @@ h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.todo-i {
+.T2 {
   display: flex;
   flex-direction: column;
 }
 
-.todo-i-i {
+.T3 {
   margin-bottom: 20px;
 }
 
@@ -55,7 +55,7 @@ input[type="text"] {
   width: 100%;
   padding: 8px 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px  white;
   outline: none;
   font-size: 14px;
   transition: border-color 0.3s ease;
@@ -65,28 +65,28 @@ input[type="text"]:focus {
   border-color: blue;
 }
 
-.primarybtn {
+.B2 {
   background-color: blue;
   color: white;
   border: none;
   padding: 10px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 0 px;
   cursor: pointer;
   font-size: 16px;
 }
 
-.primarybtn:hover {
+.B2:hover {
   background-color: blue;
 }
 
-.btn-area {
+.B1 {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
 
-.btn-area button {
+.B1 button {
   width: 48%;
   padding: 10px;
   border: none;
@@ -96,41 +96,41 @@ input[type="text"]:focus {
   transition: background-color 0.3s ease;
 }
 
-.btn-area button:first-child {
+.B1 button:first-child {
   background-color: yellow;
   color: black;
 }
 
-.btn-area button:last-child {
+.B1 button:last-child {
   background-color: green;
-  color: white;
+  color: black;
 }
 
-.btn-area button:first-child:hover {
+.B1 button:first-child:hover {
   background-color: yellow;
 }
 
-.btn-area button:last-child:hover {
+.B1 button:last-child:hover {
   background-color: green;
 }
 
-.todo-l {
+.T4 {
   margin-top: 20px;
   padding: 10px;
   background-color: white;
   border-radius: 5px;
 }
 
-.todo-l h3 {
+.T4 h2 {
   margin-bottom: 5px;
 }
 
-.todo-l p {
+.T4 h6 {
   font-size: 14px;
   color: grey;
 }
 
-.todo-i button {
+.T1 button {
   padding: 8px 12px;
   border: none;
   border-radius: 5px;
@@ -140,28 +140,29 @@ input[type="text"]:focus {
   transition: background-color 0.3s ease;
 }
 
-.todo-i button:hover {
+.T1 button:hover {
   opacity: 0.9;
 }
 
 
-.todo-i button:nth-child(3) {
-  background-color: skyblue; 
-  color: red;
+.T1 button:nth-child(3) {
+  background-color: yellow; 
+  color: black;
 }
 
-.todo-i button:nth-child(3):hover {
-  background-color: skyblue;
+.T1 button:nth-child(3):hover {
+  background-color: red;
 }
 
-.todo-i button:nth-child(2) {
+.T1 button:nth-child(2) {
   background-color: green; 
-  color: red;
+  color: black;
 }
-.todo-i button:nth-child(2):hover {
+.T1 button:nth-child(2):hover {
   background-color: green;
 }
-.completed {
-  text-decoration: line-through;
-  background-color: skyblue;
+
+.T1 button:nth-child(4) {
+  background-color: blueviolet; 
+  color: black;
 }
